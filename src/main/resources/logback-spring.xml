@@ -1,0 +1,16 @@
+<configuration>
+
+    <!-- Keep Boot defaults -->
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <include resource="org/springframework/boot/logging/logback/console-appender.xml"/>
+
+    <!-- Your custom DB appender -->
+    <appender name="SPRINGWATCH"
+              class="com.web.spring_watch.logging"/>
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="SPRINGWATCH"/>
+    </root>
+
+</configuration>
