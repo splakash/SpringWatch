@@ -6,7 +6,7 @@
 
     <!-- Your custom DB appender -->
     <appender name="SPRINGWATCH"
-              class="com.web.spring_watch.logging"/>
+              class="com.web.spring_watch.logging.DatabaseLogAppender"/>
 
     <root level="INFO">
         <appender-ref ref="CONSOLE"/>

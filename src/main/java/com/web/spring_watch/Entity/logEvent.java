@@ -2,8 +2,14 @@ package com.web.spring_watch.Entity;
 
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.time.LocalDateTime;
 
 @Entity
+@Setter
+@Getter
 public class logEvent {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,4 +23,6 @@ public class logEvent {
 
     @Column(length = 10000)
     private String stackTrace;
+
+    private LocalDateTime timestamp;
 }

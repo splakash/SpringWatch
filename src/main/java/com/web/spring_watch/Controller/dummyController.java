@@ -11,4 +11,8 @@ public class dummyController {
         public String hello(){
             return "Hello";
         }
+    @GetMapping("/test-error")
+    public String testError(){
+        throw new RuntimeException("test-error");
+    }
 }
